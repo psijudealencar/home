@@ -1,0 +1,232 @@
+@font-face {
+  font-family: 'Octarine-Light';
+  src:url(font-style/Octarine-Light.ttf.woff) format('woff'),
+      url(font-style/Octarine-Light.ttf.svg) format('svg'),
+      url(font-style/Octarine-Light.ttf.eot),
+      url(font-style/Octarine-Light.ttf.eot) format('embedded-opentype'); 
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing : antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size        : 62.5%;
+  --main-color:hsl(295, 27%, 58%);
+  --main-color-hover:hsl(295, 20%, 51%);
+  --secondary-color:hsl(171, 39%, 64%);
+  --neutral-color: hsl(33, 27%, 87%);
+  --black:hsl(0, 0%, 16%);
+  --surface-color: rgba(172, 119, 177, 0.08);
+  --surface-color-hover: rgba(172, 119, 177, 0.15);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  background: url(assets/background.svg) no-repeat top center/cover;
+  height: 100%;
+}
+
+body * {
+  font-family: 'Octarine-Light';
+}
+
+#container {
+  font-size: 1.6rem;
+  width: 100%;
+  max-width: 58.8rem;
+  margin: 4.5rem auto 0;
+  padding: 0 2.4rem;
+}
+
+/* profile */
+#profile {
+  text-align: center;
+  padding: 2.4rem;
+}
+
+#profile img {
+  width: 11.2rem;
+  border-radius: 50%;
+}
+
+#profile p {
+  color: var(--black);
+  font-weight: 500;
+  line-height: 2.4rem;
+}
+
+/*Menu*/
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding: 2.4rem 0;
+}
+
+#toggleAbout, #toggleService, #toggleSameca {
+  position: absolute;
+  opacity: 0;
+}
+
+.aboutMe, .service, .sameca {
+  display: none;
+}
+
+#toggleAbout:checked ~ .aboutMe {
+  display: block;
+}
+
+#toggleService:checked ~ .service {
+  display: block;
+}
+
+#toggleSameca:checked ~ .sameca {
+  display: block;
+}
+
+ul li label:hover {
+  cursor: pointer;
+}
+
+ul li label {
+  color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 2rem 2.4rem;
+
+  background: var(--surface-color);
+  border: 1px solid var(--main-color);
+  border-radius: 0.8rem;
+
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+.menuAbout{
+  margin: 2rem auto;
+  color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 2rem 2.4rem;
+
+  background: var(--surface-color);
+  border: 1px solid var(--main-color);
+  border-radius: 0.8rem;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+#howTo a {
+  color: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 2rem 2.4rem 2rem;
+
+  background: var(--surface-color);
+  border: 1px solid var(--main-color);
+  border-radius: 0.8rem;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.menuService, .menuSameca{
+  margin-top: 2rem;
+  color: var(--main-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  padding: 2rem 2.4rem 0;
+
+  background: var(--surface-color);
+  border: 1px solid var(--main-color);
+  border-radius: 0.8rem;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+
+.menuSameca {
+  padding-bottom: 2rem;
+  line-height: 2.4rem;
+}
+
+.menuAbout {
+  position: relative;
+}
+
+.menuAbout img{
+  border: 1.5px solid var(--main-color);
+  max-width: 20rem;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: 0.8rem;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+}
+
+.menuAbout p {
+  position: relative;
+  margin-left: 21rem;
+  line-height: 2.4rem;
+}
+
+ul li label:hover {
+  background: var(--surface-color-hover);
+}
+
+ul li .menuAbout:hover {
+  background: var(--surface-color-hover);
+}
+
+ul li .menuService:hover {
+  background: var(--surface-color-hover);
+}
+
+ul #howTo:hover {
+  background: var(--surface-color-hover);
+}
+
+ul li .menuSameca:hover {
+  background: var(--surface-color-hover);
+}
+
+#social-links {
+  display: flex;
+  justify-content: center;
+  font-size: 2.4rem;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+#social-links a {
+  color: var(--main-color);
+}
+
+
+#social-links a:hover {
+  color: var(--main-color-hover);
+}
