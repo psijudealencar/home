@@ -13,8 +13,8 @@
     
     <main id="container">
       <div id="profile">
-        <img src="assets/logo.png" alt="Logomarca do site."/>
-        <p>Juliana de Alencar - Psicóloga</p>
+        <img src="assets/profile.jpg" alt="Logomarca do site."/>
+        <p>juliana de alencar - psicóloga</p>
         <a href="http://www.cadastro.cfp.org.br/visualizar.html?profissional=tsOqVp%2FWVCkj4LWJQG%2BXVZPJmYH2OIVS2NfhBvbpWyw%3D" target="_blank">CRP 12/20214</a>
       </div>
     
@@ -23,65 +23,67 @@
 
           <li>
           <input type="checkbox" id="toggleAbout">
-          <label for="toggleAbout">Sobre mim</label>
+          <label for="toggleAbout">sobre mim</label>
           <div class="aboutMe">
             <div class="menuAbout">
-              <img src="assets/profile.jpg">
-              <p>Sou formada em Psicologia pela Universidade Federal de Santa Catarina e Mestranda em Psicologia no teatro e artes cênicas pela Universidade do Estado de Santa Catarina. <br> Atuo em psicologia clínica com foco no atendimento a jovens e adultos, incluindo pessoas LGBTQIA+ de todas identidades de gênero e orientações sexuais.</p>
+              <img src="assets/aboutMe.jpg">
+              <p class="firstP">Sou psicóloga formada pela Universidade Federal de Santa Catarina (UFSC) e atuo na clínica desde 2019.
+               <br>Atualmente (2023) estou finalizando meu mestrado em Artes Cênicas na Universidade do Estado de Santa Catarina (UDESC) e procuro exercer uma clínica atravessada também pela sensibilidade e pela poética que adquiri com o teatro.</p>
+               <p class="secondP">Atuo na clínica com foco em adolescentes, jovens e adultos. atualmente faço parte da equipe do Projeto Saúde Mental Camarada (SAMECA).</p>
+              </p>
             </div>
           </div>
           </li>
 
           <li>
             <input type="checkbox" id="toggleService">
-            <label for="toggleService">Atendimento</label>
+            <label for="toggleService">sobre a psicoterapia</label>
             <div class="service">
               <div class="menuService">
-                <h1>Clínica sensível e poética</h1>
+                <img src="assets/purpleHouse.png" alt="Logo do site">
                 <ul>
-                <li>• atendimento para jovens e adultos</li>
-                <li>• atendimento online e presencial</li>
-                <li>• comunidade LGBTQIA+</li>
-                <li>• terapia familiar</li>
+                  <li>• clínica sensível e poética</li>
+                  <li>• psicoterapia com base no construcionismo social</li>
+                  <li>• atendimento de crianças, adolescentes e adultos</li>
                 </ul>
             </div>
+          </div>
           </li>
                 
-          <li>
-            <input type="checkbox" id="toggleSameca">
-            <label for="toggleSameca">SAMECA</label>
-            <div class="sameca">
-              <div class="menuSameca">
-                <h1>Projeto Saúde Mental Camarada</h1>
-                <br>
-                <p>O Projeto Saúde Mental Camarada, também conhecido como SAMECA oferece apoio psicológico a valores sociais às pessoas da comunidade da Soberana presentes no nosso discord aberto. Ao mesmo tempo, o SAMECA organiza uma rede de profissionais da psicologia em torno de uma prática que considera o sujeito em sua dimensão social, fortalecendo a categoria profissional e estimulando sua consciência de classe.</p>
-                <br>
-                <a href="https://discord.com/channels/828778305691844609/849991695725625394/1073348147604115456">Saiba mais</a>
-              </div>
-            </div>
+          <li id="apointment">
+            <a href="https://wa.me/5548998468897" target="_blank">
+            agendar uma sessão
+            </a>
           </li>
 
-          <li id="howTo">
-            <a href="https://maps.app.goo.gl/FxtL4zzURjEfGHPf9" target="_blank">Como chegar</a>
+          <li>
+            <input type="checkbox" id="toggleMap">
+            <label for="toggleMap">como chegar</label>
+            <div class="map">
+              <div class="menuMap">
+              <h1>Madison Center</h1>
+              <p>R. Des. Vítor Lima, 260 - Trindade, Florianópolis - SC, 88040-401</p>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d883.9726399735575!2d-48.5230231!3d-27.5969224!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9527385442f98cd1%3A0xb7383f398f2b8dee!2sMadison%20Center!5e0!3m2!1spt-BR!2spt!4v1696862542897!5m2!1spt-BR!2spt" width="100%" height="100%" style="border-radius: 8px; border: none;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+          </div>
           </li>
         </ul>
       </nav>
+      
     </main>
-
-      <footer id="social-links">
-        <a href="https://instagram.com/psi.judealencar" target="_blank">
-          <ion-icon name="logo-instagram"></ion-icon>
-        </a>
-
-        <a href="https://wa.me/5548998468897" target="_blank">
-          <ion-icon name="logo-whatsapp"></ion-icon>
-        </a>
-
-        <a href="https://www.linkedin.com/in/juliana-barbosa-de-alencar-7836a2154/" target="_blank">
-          <ion-icon name="logo-linkedin"></ion-icon>
-        </a>
-      </footer>
-
+    
+    <footer id="social-links">
+      <a href="https://instagram.com/psi.judealencar" target="_blank">
+        <ion-icon name="logo-instagram"></ion-icon>
+      </a>
+      
+      <a href="https://wa.me/5548998468897" target="_blank">
+        <ion-icon name="logo-whatsapp"></ion-icon>
+      </a>
+      
+    </footer>
+    
+    <img id="footerImg" src="assets/greenHouse.png" alt="Logomarca">
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
@@ -90,7 +92,5 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
-
-    <script src="./script.js"></script>
   </body>
 </html>

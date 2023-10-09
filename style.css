@@ -20,8 +20,7 @@
   font-size        : 62.5%;
   --main-color:hsl(295, 27%, 58%);
   --main-color-hover:hsl(295, 20%, 51%);
-  --secondary-color:hsl(171, 39%, 64%);
-  --neutral-color: hsl(33, 27%, 87%);
+  --background-color: hsl(32, 52%, 89%);
   --black:hsl(0, 0%, 16%);
   --surface-color: rgba(172, 119, 177, 0.08);
   --surface-color-hover: rgba(172, 119, 177, 0.15);
@@ -33,7 +32,7 @@ a {
 }
 
 body {
-  background: url(assets/background.svg) no-repeat top center/cover;
+  background: var(--background-color);
   height: 100%;
 }
 
@@ -52,7 +51,6 @@ body * {
 /* profile */
 #profile {
   text-align: center;
-  padding: 2.4rem;
 }
 
 #profile img {
@@ -71,16 +69,15 @@ ul {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
-  padding: 2.4rem 0;
+  margin-top: 2.4rem;
 }
 
-#toggleAbout, #toggleService, #toggleSameca {
+#toggleAbout, #toggleService, #toggleMap {
   position: absolute;
-  opacity: 0;
+  display: none;
 }
 
-.aboutMe, .service, .sameca {
+.aboutMe, .service, .map {
   display: none;
 }
 
@@ -92,7 +89,7 @@ ul {
   display: block;
 }
 
-#toggleSameca:checked ~ .sameca {
+#toggleMap:checked ~ .map {
   display: block;
 }
 
@@ -100,126 +97,81 @@ ul li label:hover {
   cursor: pointer;
 }
 
-ul li label {
-  color: var(--main-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 2rem 2.4rem;
-
-  background: var(--surface-color);
-  border: 1px solid var(--main-color);
-  border-radius: 0.8rem;
-
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-}
-
-.menuAbout{
-  margin: 2rem auto;
-  color: var(--main-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  padding: 2rem 2.4rem;
-
-  background: var(--surface-color);
-  border: 1px solid var(--main-color);
-  border-radius: 0.8rem;
-
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-}
-
-#howTo a {
-  color: var(--main-color);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  padding: 2rem 2.4rem 2rem;
-
-  background: var(--surface-color);
-  border: 1px solid var(--main-color);
-  border-radius: 0.8rem;
-
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-}
-
-.menuService, .menuSameca{
+ul li label, .menuAbout, #apointment a, .menuService, .menuMap {
   margin-top: 2rem;
+  border-radius: 0.8rem;
+  padding: 2rem 2.4rem;
+  
   color: var(--main-color);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-  padding: 2rem 2.4rem 0;
-
   background: var(--surface-color);
   border: 1px solid var(--main-color);
-  border-radius: 0.8rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 }
 
-.menuSameca {
-  padding-bottom: 2rem;
-  line-height: 2.4rem;
+.menuMap {
+  height: 45rem;
+  padding: 2rem;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
 }
 
 .menuAbout {
-  position: relative;
+  display: grid;
+  grid-template-areas:
+  "a b"
+  "a b"
+  "c c";
+  line-height: 2.4rem;
 }
 
 .menuAbout img{
   border: 1.5px solid var(--main-color);
-  max-width: 20rem;
   aspect-ratio: 3/4;
+  max-width: 100%;
   object-fit: cover;
   border-radius: 0.8rem;
-  position: absolute;
-  top: 2rem;
-  left: 2rem;
+  grid-area: a;
 }
 
-.menuAbout p {
-  position: relative;
-  margin-left: 21rem;
+.menuAbout .firstP {
+  grid-area: b;
+  padding-top: 1rem;
+  padding-left: 2rem;
+}
+
+.menuAbout .secondP {
+  grid-area: c;
+}
+
+.menuService ul{
   line-height: 2.4rem;
+  margin-top: 0px;
+  margin-left: 2rem;
 }
 
-ul li label:hover {
+.menuService img {
+  max-width: 15rem;
+}
+
+ul li label:hover,ul li .menuAbout:hover, ul li .menuService:hover, ul #apointment a:hover, ul li .menuMap:hover{
   background: var(--surface-color-hover);
 }
 
-ul li .menuAbout:hover {
-  background: var(--surface-color-hover);
-}
 
-ul li .menuService:hover {
-  background: var(--surface-color-hover);
-}
-
-ul #howTo:hover {
-  background: var(--surface-color-hover);
-}
-
-ul li .menuSameca:hover {
-  background: var(--surface-color-hover);
-}
-
+/*Footer*/
 #social-links {
   display: flex;
   justify-content: center;
   font-size: 2.4rem;
   gap: 4rem;
-  margin-bottom: 4rem;
+  margin-top: 5rem;
 }
 
 #social-links a {
@@ -229,4 +181,33 @@ ul li .menuSameca:hover {
 
 #social-links a:hover {
   color: var(--main-color-hover);
+}
+
+#footerImg {
+  width: 10rem;
+  position: fixed;
+  left: 2rem;
+  bottom: 2rem;
+}
+
+
+/*Mobile Version*/
+@media (max-width: 600px) {
+  .menuAbout {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .menuAbout img{
+    aspect-ratio: 16/9;
+  }
+
+  .menuAbout .firstP {
+    padding-top: 2rem;
+    padding-left: 0rem;
+  }
+
+  #footerImg {
+    position: relative;
+  }
 }
