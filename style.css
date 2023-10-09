@@ -21,9 +21,10 @@
   --main-color:hsl(295, 27%, 58%);
   --main-color-hover:hsl(295, 20%, 51%);
   --background-color: hsl(32, 52%, 89%);
+  --thir-color: hsl(168, 24%, 68%);
   --black:hsl(0, 0%, 16%);
-  --surface-color: rgba(172, 119, 177, 0.08);
-  --surface-color-hover: rgba(172, 119, 177, 0.15);
+  --surface-color: hsla(295, 27%, 58%, 0.08);
+  --surface-color-hover: hsla(295, 27%, 58%, 0.15);
 }
 
 a {
@@ -62,6 +63,10 @@ body * {
   color: var(--black);
   font-weight: 500;
   line-height: 2.4rem;
+}
+
+#profile a {
+  color: var(--thir-color);
 }
 
 /*Menu*/
@@ -184,7 +189,7 @@ ul li label:hover,ul li .menuAbout:hover, ul li .menuService:hover, ul #apointme
 }
 
 #footerImg {
-  width: 10rem;
+  width: 20rem;
   position: fixed;
   left: 2rem;
   bottom: 2rem;
@@ -192,7 +197,7 @@ ul li label:hover,ul li .menuAbout:hover, ul li .menuService:hover, ul #apointme
 
 
 /*Mobile Version*/
-@media (max-width: 600px) {
+@media (max-width: 980px) {
   .menuAbout {
     display: flex;
     flex-direction: column;
@@ -207,7 +212,18 @@ ul li label:hover,ul li .menuAbout:hover, ul li .menuService:hover, ul #apointme
     padding-left: 0rem;
   }
 
+  footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
   #footerImg {
     position: relative;
+    left: 0;
+    bottom: 1rem;
   }
 }
+
+
