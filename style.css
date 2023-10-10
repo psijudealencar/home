@@ -212,6 +212,12 @@ ul li label:hover,ul li .menuAbout:hover, ul li .menuService:hover, ul #apointme
     padding-left: 0rem;
   }
 
+  .menuService {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
   footer {
     display: flex;
     flex-direction: column;
