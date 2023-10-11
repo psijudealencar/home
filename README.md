@@ -16,9 +16,17 @@ O LinkTree-Style Website para Psicóloga é uma plataforma que permite à sua am
 
 ## Capturas de Tela
 
-![Página Inicial](screenshots/home.png)
-![Sobre](screenshots/about.png)
-![Serviços](screenshots/services.png)
+![Página Inicial](screenshots/home-desktop.png)
+![Sobre](screenshots/about-desktop.png)
+![Serviços](screenshots/services-desktop.png)
+![Como chegar](screenshots/maps-desktop)
+
+## Versão Mobile
+
+![Página Inicial](screenshots/home-mobile.png)
+![Sobre](screenshots/about-mobile.png)
+![Serviços](screenshots/services-mobile.png)
+![Como chegar](screenshots/maps-mobile)
 
 ## Tecnologias Utilizadas
 
