@@ -189,6 +189,12 @@ button, .toggle {
     max-width: 100%;
   }
 
+  .menuService {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+  
   footer {
     display: flex;
     flex-direction: column;
