@@ -39,9 +39,8 @@ body {
 
 #container {
   font-size: 1.6rem;
-  width: 100%;
-  max-width: 58.8rem;
   margin: 4.5rem auto 0;
+  width: 58rem;
   padding: 0 2.4rem;
 }
 
@@ -100,12 +99,12 @@ body {
   background: var(--surface-color-hover);
 }
 
-button, .toggle {
+.list, .toggle, .appointment button{
   font-size: 1.6rem;
   margin-top: 2rem;
   border-radius: 0.8rem;
   padding: 2rem 2.4rem;
-  
+  width: 100%;
   color: var(--main-color);
   background: var(--surface-color);
   border: 1px solid var(--main-color);
@@ -134,7 +133,7 @@ button, .toggle {
 
 .menuService img {
   max-width: 15rem;
-  margin-right: 2rem;
+  margin-right: 4rem;
   float: left;
 }
 
@@ -187,12 +186,6 @@ button, .toggle {
   .menuAbout img{
     aspect-ratio: 16/9;
     max-width: 100%;
-  }
-
-  .menuService {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
   }
   
   footer {
