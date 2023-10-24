@@ -129,13 +129,14 @@ body {
 
 .menuService{
   line-height: 2.4rem;
-  margin-top: 0px;
+
+  display: flex;
+  align-items: center;
+  gap: 3rem;
 }
 
 .menuService img {
   max-width: 15rem;
-  margin-right: 4rem;
-  float: left;
 }
 
 .menuMap h1 {
@@ -189,6 +190,10 @@ body {
     max-width: 100%;
   }
   
+  .menuService{
+    flex-direction: column;
+  }
+
   footer {
     display: flex;
     flex-direction: column;
